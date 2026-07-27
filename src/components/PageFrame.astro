@@ -4,6 +4,12 @@ import Default from '@astrojs/starlight/components/PageFrame.astro';
 import { SHOW_DRAFT_BANNER } from '../config';
 ---
 
+<Default {...Astro.props}>
+	<slot name="header" slot="header" />
+	<slot name="sidebar" slot="sidebar" />
+	<slot />
+</Default>
+
 {SHOW_DRAFT_BANNER && (
 	<div class="draft-announcement-banner">
 		<div class="banner-content">
@@ -11,12 +17,6 @@ import { SHOW_DRAFT_BANNER } from '../config';
 		</div>
 	</div>
 )}
-
-<Default {...Astro.props}>
-	<slot name="header" slot="header" />
-	<slot name="sidebar" slot="sidebar" />
-	<slot />
-</Default>
 
 <style>
 	.draft-announcement-banner {
