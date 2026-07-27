@@ -14,6 +14,10 @@ Social coding and open-source contribution are built on collaboration. Before di
 
 ---
 
+## Prereq
+
+You need to register at Github in the following link: https://github.com/
+
 ## 🏃‍♂️ Action Guide
 
 ### 1. Support the Open-Source Repositories
