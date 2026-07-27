@@ -26,9 +26,9 @@ Go to GitHub, log into your account, and **star** the following repositories. St
 
 ### 2. Follow the Core Crew on GitHub
 Following individuals on GitHub helps you see what other engineers in the group are working on:
-*   [empeje](https://github.com/empeje) (Zain)
-*   [yuliefas](https://github.com/yuliefas)
-*   [hudakurniawan](https://github.com/hudakurniawan)
+*   [empeje](https://github.com/empeje)
+*   [ragilzakaria](https://github.com/ragilzakaria)
+*   [ahloct](https://github.com/ahloct)
 
 ### 3. Join the Communication Channels
 We coordinate all peer-to-peer discussions, code reviews, and meeting announcements via chat:
