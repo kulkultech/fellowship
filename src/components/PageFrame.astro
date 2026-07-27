@@ -5,11 +5,18 @@ import { SHOW_DRAFT_BANNER } from '../config';
 ---
 
 {SHOW_DRAFT_BANNER && (
-	<div class="draft-announcement-banner">
-		<div class="banner-content">
-			⚠️ This has not been officially announced. All of the information here is not valid until this banner is removed by the owner of the page.
+	<>
+		<style is:global>
+			:root {
+				--sl-banner-height: 2.75rem;
+			}
+		</style>
+		<div class="draft-announcement-banner">
+			<div class="banner-content">
+				⚠️ This has not been officially announced. All of the information here is not valid until this banner is removed by the owner of the page.
+			</div>
 		</div>
-	</div>
+	</>
 )}
 
 <Default {...Astro.props}>
@@ -22,14 +29,18 @@ import { SHOW_DRAFT_BANNER } from '../config';
 	.draft-announcement-banner {
 		background: linear-gradient(90deg, #ff4e50, #f9d423);
 		color: #1a1a1a;
-		padding: 0.6rem 1.2rem;
+		height: 2.75rem;
+		box-sizing: border-box;
 		text-align: center;
 		font-weight: 700;
-		font-size: 0.875rem;
-		position: relative;
+		font-size: 0.85rem;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
 		z-index: 101;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-		letter-spacing: 0.03em;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+		letter-spacing: 0.02em;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -38,5 +49,21 @@ import { SHOW_DRAFT_BANNER } from '../config';
 	.banner-content {
 		max-width: 80rem;
 		margin: 0 auto;
+		padding: 0 1rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	@media (max-width: 50rem) {
+		:root {
+			--sl-banner-height: 3.5rem !important;
+		}
+		.draft-announcement-banner {
+			height: 3.5rem;
+			font-size: 0.75rem;
+		}
+		.banner-content {
+			white-space: normal;
+		}
 	}
 </style>
