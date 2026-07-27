@@ -68,3 +68,35 @@ Candidates can verify if they solved the coding challenge bugs correctly by runn
 uv run npm run test
 ```
 *This executes the Vitest test suite and outputs the results.*
+
+---
+
+## 🌐 3. How to Deploy the Wiki to Netlify
+
+To deploy the Astro Starlight documentation portal on Netlify, follow these steps:
+
+### Prerequisites
+1. Ensure the `.gitmodules` file in the root directory uses the public HTTPS URL for the sandbox (this has already been set up in our repository):
+   ```ini
+   url = https://github.com/kulkultech/fellowship-management-system.git
+   ```
+2. Commit and push your code to your GitHub repository:
+   ```bash
+   git add .gitmodules
+   git commit -m "chore: use HTTPS url for sandbox submodule to enable Netlify builds"
+   git push origin main
+   ```
+
+### Step-by-Step Deployment
+1. Log in to your [Netlify Dashboard](https://app.netlify.com/).
+2. Click **Add new site** -> **Import an existing project**.
+3. Select **GitHub** as your git provider and authorize Netlify.
+4. Select the **`kulkultech/fellowship`** repository.
+5. In the **Site configuration** window, configure the following settings:
+   * **Base directory:** (Leave blank - root directory)
+   * **Build command:** `npm run build`
+   * **Publish directory:** `dist`
+6. Click **Show advanced settings** and define these **Environment Variables**:
+   * `SHARP_IGNORE_GLOBAL_LIBVIPS` = `1` (prevents sharp installation crashes on Netlify's build container)
+   * `NODE_VERSION` = `20` (ensures Node LTS compatibility)
+7. Click **Deploy Site**. Netlify will automatically pull the submodule, compile the Astro pages, generate search indexes, and host your live wiki portal!
