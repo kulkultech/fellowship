@@ -56,11 +56,11 @@ uv run npm install
 ```
 
 ### Run Locally
-To run the sandbox React application locally:
+To run the sandbox application locally (frontend + Netlify functions backend API):
 ```bash
-uv run npm run dev
+uv run npx netlify dev
 ```
-*The sandbox will run on `http://localhost:5173`.*
+*The server will run on `http://localhost:8888`. It automatically emulates Netlify functions and proxies `/api/*` requests.*
 
 ### Run the Test Suite
 Candidates can verify if they solved the coding challenge bugs correctly by running:
