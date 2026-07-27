@@ -1,0 +1,42 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+import Default from '@astrojs/starlight/components/PageFrame.astro';
+import { SHOW_DRAFT_BANNER } from '../config';
+---
+
+{SHOW_DRAFT_BANNER && (
+	<div class="draft-announcement-banner">
+		<div class="banner-content">
+			⚠️ This has not been officially announced. All of the information here is not valid until this banner is removed by the owner of the page.
+		</div>
+	</div>
+)}
+
+<Default {...Astro.props}>
+	<slot name="header" slot="header" />
+	<slot name="sidebar" slot="sidebar" />
+	<slot />
+</Default>
+
+<style>
+	.draft-announcement-banner {
+		background: linear-gradient(90deg, #ff4e50, #f9d423);
+		color: #1a1a1a;
+		padding: 0.6rem 1.2rem;
+		text-align: center;
+		font-weight: 700;
+		font-size: 0.875rem;
+		position: relative;
+		z-index: 101;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+		letter-spacing: 0.03em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
+	.banner-content {
+		max-width: 80rem;
+		margin: 0 auto;
+	}
+</style>

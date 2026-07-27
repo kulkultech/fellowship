@@ -7,6 +7,9 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'KulKul Fellowship',
+			components: {
+				PageFrame: './src/components/PageFrame.astro',
+			},
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/kulkultech/fellowship' }],
 			sidebar: [
 				{
