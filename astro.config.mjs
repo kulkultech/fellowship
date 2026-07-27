@@ -16,6 +16,7 @@ export default defineConfig({
 					label: 'Start Here',
 					items: [
 						{ label: 'Program Onboarding', slug: 'onboarding' },
+						{ label: 'Non-Coder Guide', slug: 'non-coder-guide' },
 						{
 							label: '10-Step AI Challenge',
 							items: [
