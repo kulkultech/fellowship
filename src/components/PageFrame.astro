@@ -5,18 +5,11 @@ import { SHOW_DRAFT_BANNER } from '../config';
 ---
 
 {SHOW_DRAFT_BANNER && (
-	<>
-		<style is:global>
-			:root {
-				--sl-banner-height: 2.75rem;
-			}
-		</style>
-		<div class="draft-announcement-banner">
-			<div class="banner-content">
-				⚠️ This has not been officially announced. All of the information here is not valid until this banner is removed by the owner of the page.
-			</div>
+	<div class="draft-announcement-banner">
+		<div class="banner-content">
+			⚠️ This has not been officially announced. All of the information here is not valid until this banner is removed by the owner of the page.
 		</div>
-	</>
+	</div>
 )}
 
 <Default {...Astro.props}>
@@ -35,16 +28,16 @@ import { SHOW_DRAFT_BANNER } from '../config';
 		font-weight: 700;
 		font-size: 0.85rem;
 		position: fixed;
-		top: 0;
+		bottom: 0;
 		left: 0;
 		right: 0;
 		z-index: 101;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+		box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
 		letter-spacing: 0.02em;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
 	}
 	.banner-content {
 		max-width: 80rem;
@@ -55,9 +48,6 @@ import { SHOW_DRAFT_BANNER } from '../config';
 		white-space: nowrap;
 	}
 	@media (max-width: 50rem) {
-		:root {
-			--sl-banner-height: 3.5rem !important;
-		}
 		.draft-announcement-banner {
 			height: 3.5rem;
 			font-size: 0.75rem;
