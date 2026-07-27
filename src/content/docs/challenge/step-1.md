@@ -29,6 +29,7 @@ Following individuals on GitHub helps you see what other engineers in the group 
 *   [empeje](https://github.com/empeje)
 *   [ragilzakaria](https://github.com/ragilzakaria)
 *   [ahloct](https://github.com/ahloct)
+*   [hudakurniawan](https://github.com/hudakurniawan)
 
 ### 3. Join the Communication Channels
 We coordinate all peer-to-peer discussions, code reviews, and meeting announcements via chat:
