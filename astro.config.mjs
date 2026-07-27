@@ -10,6 +10,9 @@ export default defineConfig({
 			components: {
 				PageFrame: './src/components/PageFrame.astro',
 			},
+			editLink: {
+				baseUrl: 'https://github.com/kulkultech/fellowship/edit/main/',
+			},
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/kulkultech/fellowship' }],
 			sidebar: [
 				{
