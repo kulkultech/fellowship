@@ -8,31 +8,34 @@ A feature is not done until it is deployed to production. In this step, you will
 ---
 
 ## 🎯 Step Objectives
-*   Configure a live production database instance on Supabase.
-*   Deploy your frontend React application on Vercel.
-*   Configure production environment variables.
+*   Deploy your working sandbox frontend and serverless backend to Netlify.
+*   Configure the repository submodule build configuration.
+*   Verify that candidate registration works dynamically in production.
 
 ---
 
 ## 🏃‍♂️ Action Guide
 
-### 1. Provision a Supabase Database
-1. Go to [Supabase](https://supabase.com) and sign up for a free account.
-2. Click **New Project** and name it `KulKul Sandbox`.
-3. Set your database password and choose the server region closest to you.
-4. Once provisioning finishes, go to the **Project Settings** -> **API** to find your:
-   *   `Project API URL`
-   *   `Anon Public API Key`
+A feature is not done until it is deployed. In this step, you will deploy the Fellowship Management System sandbox to **Netlify**, which automatically hosts your static Vite React frontend and runs your serverless Netlify Functions backend.
 
-### 2. Deploy to Vercel
-1. Go to [Vercel](https://vercel.com) and log in using your GitHub account.
-2. Click **Add New** -> **Project**.
-3. Import your forked `fellowship` repository.
-4. **Configure the Project Root:** Under "Root Directory", select the `sandbox` subfolder.
-5. **Configure Environment Variables:** Add the following environment keys:
-   *   `VITE_SUPABASE_URL` = (Your Supabase Project URL)
-   *   `VITE_SUPABASE_ANON_KEY` = (Your Supabase Anon Key)
-6. Click **Deploy**. Vercel will build your static files and publish a public URL.
+### 1. Import Your Project in Netlify
+1. Go to [Netlify](https://app.netlify.com/) and sign up or log in using your GitHub account.
+2. Click **Add new site** -> **Import an existing project**.
+3. Select **GitHub** as your Git provider, authorize Netlify, and select your forked **`fellowship`** repository.
 
-### 3. Verify Production Setup
-Open the Vercel deployment URL in your browser and test the application features. Ensure that database reads/writes work correctly against your live Supabase DB.
+### 2. Configure Build & Submodule Settings
+Under the Site configuration page, Netlify needs to compile the `sandbox` subdirectory. Configure these exact settings:
+*   **Base directory:** `sandbox`
+*   **Build command:** `npm run build`
+*   **Publish directory:** `sandbox/dist`
+*   **Build settings (Submodules):** Netlify will automatically detect and pull the `sandbox` git submodule folder.
+
+### 3. Deploy the Sandbox
+1. Click **Deploy Site**. Netlify will clone your repository (including its submodules), run Vite build, bundle the serverless functions under `netlify/functions/`, and deploy a public URL.
+2. Once the deployment finishes, open the live URL.
+
+### 4. Verify Live Production Database
+On your live deployed website:
+1. Click **Apply Now** and register yourself as a fellow candidate.
+2. Keep the email empty to verify that it defaults to your `username@placeholder.kulkul.tech` format.
+3. Verify that your profile registers successfully in the dashboard and you can view your personal progress checklist. Since it runs in production, Netlify will automatically spin up **Netlify Blobs** to persist candidate states with no manual database credentials!

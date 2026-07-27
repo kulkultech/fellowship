@@ -21,12 +21,15 @@ Now that your workspace and AI stack are set up, we will start working with git.
 2. Click the **Fork** button in the top-right corner.
 3. Select your GitHub username as the target. Keep the name `fellowship` and click **Create Fork**.
 
-### 2. Clone the Repository Locally
+### 2. Clone the Repository and Submodules Locally
 Open your terminal (WSL terminal for Windows, native terminal for macOS/Linux) and clone your fork using SSH:
 ```bash
 # Replace YOUR_USERNAME with your actual GitHub username
 git clone git@github.com:YOUR_USERNAME/fellowship.git
 cd fellowship
+
+# Initialize and pull the sandbox submodule codebase
+git submodule update --init --recursive
 ```
 
 ### 3. Verify Required Repository Files

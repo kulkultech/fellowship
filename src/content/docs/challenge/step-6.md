@@ -9,34 +9,32 @@ Before writing code for the sandbox application, you must understand its archite
 
 ## 🎯 Step Objectives
 *   Understand the roles of Vite and React in the frontend.
-*   Understand how Supabase (PostgreSQL, Auth, Realtime) serves as the backend database.
-*   Understand how client and server components communicate.
+*   Understand how Netlify Functions provide serverless backend endpoints.
+*   Understand the database repository pattern using Netlify Blobs (production) and In-Memory storage (local development/testing).
 
 ---
 
 ## 📖 Architecture Design
 
-The sandbox application is built using a modern, serverless-first architecture:
+The sandbox application (**Fellowship Management System**) is built using a serverless-first architecture:
 
 ```mermaid
 graph TD
-    Client[Vite + React Frontend] -->|Auth Requests| Auth[Supabase Auth]
-    Client -->|GraphQL / REST API Queries| DB[(Supabase PostgreSQL)]
-    Client -->|Realtime Channels| Realtime[Supabase Realtime]
-    Client -->|File Uploads| Storage[Supabase Storage]
+    Client[Vite + React Frontend] -->|API Requests| Backend[Netlify Functions API]
+    Backend -->|Production Database| DB[(Netlify Blobs Store)]
+    Backend -->|Development/Testing DB| InMemory[(In-Memory Repository)]
 ```
 
 ### 1. The Frontend (Vite + React)
 *   **Vite:** Serves as our lightning-fast asset bundler and dev server.
 *   **React:** Provides our interactive, component-based user interface.
-*   **Aesthetics:** Follows our glassmorphic design token guidelines (curated HSL palettes, blur backdrops, glow indicators) defined in [DESIGN.md](/design).
+*   **Aesthetics:** Follows our Astro Starlight design guidelines (matching HSL gray shades, hairline borders, and default tags/buttons).
 
-### 2. The Backend (Supabase)
-Supabase provides our backend services without the need to write custom server APIs:
-*   **PostgreSQL Database:** Storing all application records (intern profiles, tasks list, mentor logs).
-*   **Authentication (Auth):** Handles user sign-ups, magic links, passwords, and session tokens.
-*   **Realtime:** Automatically broadcasts database changes (e.g. when an intern updates a task, other mentors see the change immediately).
-*   **Storage:** Manages file storage, such as uploading profile pictures or candidate resumes.
+### 2. The Backend (Netlify Functions)
+Serverless API endpoints are deployed to serve API endpoints:
+*   **`netlify/functions/api.js`**: An ES Module serverless router handling candidate registration, progress logging, and graduation certificate generation.
 
-### 3. Connection & Environment Configuration
-Vite communicates with Supabase via the `@supabase/supabase-js` client SDK. It uses environment variables (typically `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`) loaded from a `.env` file to configure connection states.
+### 3. Database Repositories
+We use the Repository Pattern to abstract data persistence:
+*   **Production (Netlify Blobs):** A serverless key-value blob storage provided by Netlify, requiring zero configuration or credentials.
+*   **Local Development (In-Memory Repository):** A fallback data store seeded with mock candidates, allowing you to develop and test locally with no database setups.

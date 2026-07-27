@@ -9,32 +9,41 @@ This step describes how to pick up and solve issue tickets in our open-source co
 
 ## 🎯 Step Objectives
 *   Learn how to identify and assign yourself to open issues.
-*   Practice git branching workflows.
-*   Resolve a designated coding bug or request using AI companions.
+*   Practice git branching workflows in a submodule context.
+*   Resolve three designated coding bugs in the backend repository using AI companions.
 
 ---
 
 ## 🏃‍♂️ Action Guide
 
-*Note: Since our Intern Management System sandbox is currently in development (see [README.md](/sandbox/readme)), you will complete this step on your local workspace by simulating a bug fix.*
+Our Fellowship Management System contains three intentional bugs seeded in the backend code. You will need to resolve all of them.
 
-### 1. Check for Issues
-1. Look at the **GitHub Issues** tab in the main repository.
-2. Select one of the marked onboarding issues (e.g. "Onboarding Challenge: Fix task counter" or "Onboarding Challenge: Add filter function").
-3. Leave a comment stating: *"I am working on this issue as part of my onboarding challenge."*
-
-### 2. Create a Topic Branch
-Never make changes directly to your `main` or `master` branch. Navigate to the sandbox folder and check out a new branch:
+### 1. Check out a Topic Branch
+Never make changes directly to the `main` or `master` branch. Navigate to the `sandbox` directory and create a new feature branch:
 ```bash
 cd sandbox
 git checkout -b feature/solve-onboarding-issue
 ```
 
-### 3. Solve the Bug using AI
-1. Open the file related to the bug in your editor (e.g. `src/App.jsx`).
-2. Use your coding agent (Cursor or Antigravity) to review the buggy section and write the solution.
-3. Start the dev server locally to verify:
-   ```bash
-   npm run dev
-   ```
-4. Check in the browser that the bug is resolved and no console errors are thrown.
+### 2. Identify the Seeded Bugs
+Open the database repository code in your editor (e.g. `sandbox/netlify/functions/lib/InMemoryFellowRepository.js` and `NetlifyBlobFellowRepository.js`) to find the bug areas:
+
+1.  **Bug 1: Progress Checklist Toggling (Step-3)**
+    *   **Symptom:** Toggling "Step 3" in the checklist flips the state incorrectly (saves the opposite boolean).
+    *   **Target Files:** `InMemoryFellowRepository.js` and `NetlifyBlobFellowRepository.js`.
+    *   **Fix:** Locate the `step-3` override inside `updateProgress` and remove the erroneous inversion logic.
+2.  **Bug 2: Form Fields Validation (Email optional / placeholder format)**
+    *   **Symptom:** Registration accepts empty/malformed emails and invalid usernames with spaces.
+    *   **Target Files:** `InMemoryFellowRepository.js` and `NetlifyBlobFellowRepository.js`.
+    *   **Fix:** In `saveApplication`, add validation. Throw an error if a provided email lacks `@` or username contains spaces. If email is omitted/blank, default it to the placeholder format `github_username@placeholder.kulkul.tech`.
+3.  **Bug 3: Certificate Generation TypeError**
+    *   **Symptom:** Graduating a fellow crashes the backend due to a split array indexing crash when parsing the domain.
+    *   **Target Files:** `InMemoryFellowRepository.js` and `NetlifyBlobFellowRepository.js`.
+    *   **Fix:** In `graduateFellow`, correct the index of the `split('@')` result when fetching the domain portion.
+
+### 3. Start the Dev Server
+Start the Netlify development server to run both the Vite React frontend and the functions backend locally:
+```bash
+uv run npx netlify dev
+```
+Open `http://localhost:8888` in your browser and test the registration and progress checklists. Verify that registration falls back to the placeholder email if left blank.
