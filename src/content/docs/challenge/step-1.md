@@ -16,6 +16,8 @@ Social coding and open-source contribution are built on collaboration. Before di
 
 ## 🏃‍♂️ Action Guide
 
+Pre-action: Sign up for a [GitHub](https://docs.github.com/en/get-started) account.
+
 ### 1. Support the Open-Source Repositories
 Go to GitHub, log into your account, and **star** the following repositories. Starring project repositories is a way to show appreciation and stay updated:
 *   ⭐ [KulKul Fellowship Portal](https://github.com/kulkultech/fellowship) — The source of this onboarding portal.
