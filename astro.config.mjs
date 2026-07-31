@@ -7,13 +7,28 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'KulKul Fellowship',
+			logo: {
+				src: './src/assets/kulkul-logo.png',
+				alt: 'KulKul Fellowship',
+			},
 			components: {
+				Header: './src/components/Header.astro',
 				PageFrame: './src/components/PageFrame.astro',
+				SocialIcons: './src/components/SocialIcons.astro',
 			},
 			editLink: {
 				baseUrl: 'https://github.com/kulkultech/fellowship/edit/main/',
 			},
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/kulkultech/fellowship' }],
+			social: [
+				{ icon: 'x.com', label: 'KulKul on X', href: 'https://x.com/kulkultech' },
+				{
+					icon: 'linkedin',
+					label: 'KulKul on LinkedIn',
+					href: 'https://www.linkedin.com/company/kulkul-technology/',
+				},
+				{ icon: 'discord', label: 'Join the KulKul Discord', href: 'https://discord.com/invite/AYvyGpb7aP' },
+				{ icon: 'github', label: 'Fellowship on GitHub', href: 'https://github.com/kulkultech/fellowship' },
+			],
 			sidebar: [
 				{
 					label: 'Start Here',

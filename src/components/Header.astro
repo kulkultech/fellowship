@@ -1,0 +1,236 @@
+---
+import config from 'virtual:starlight/user-config';
+import { Icon } from '@astrojs/starlight/components';
+
+import LanguageSelect from 'virtual:starlight/components/LanguageSelect';
+import Search from 'virtual:starlight/components/Search';
+import SiteTitle from 'virtual:starlight/components/SiteTitle';
+import SocialIcons from 'virtual:starlight/components/SocialIcons';
+import ThemeSelect from 'virtual:starlight/components/ThemeSelect';
+
+/**
+* Render the `Search` component if Pagefind is enabled or the default search component has been overridden.
+*/
+const shouldRenderSearch =
+	config.pagefind || config.components.Search !== '@astrojs/starlight/components/Search.astro';
+---
+
+<div class="header brand-header">
+	<div class="title-wrapper sl-flex">
+		<SiteTitle />
+	</div>
+	<div class="sl-flex print:hidden">
+		{shouldRenderSearch && <Search />}
+	</div>
+	<details class="mobile-tools md:sl-hidden print:hidden">
+		<summary aria-label="KulKul links and display settings">
+			<Icon name="external" />
+		</summary>
+		<div class="mobile-tools-panel">
+			<a
+				class="about-link"
+				href="https://www.kulkul.tech/about-us/"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				About KulKul
+			</a>
+			<div class="sl-flex mobile-social-icons">
+				<SocialIcons />
+			</div>
+			<ThemeSelect />
+			<LanguageSelect />
+		</div>
+	</details>
+	<div class="sl-hidden md:sl-flex print:hidden right-group">
+		<a
+			class="about-link"
+			href="https://www.kulkul.tech/about-us/"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			About KulKul
+		</a>
+		<div class="sl-flex social-icons">
+			<SocialIcons />
+		</div>
+		<ThemeSelect />
+		<LanguageSelect />
+	</div>
+</div>
+
+<style>
+	@layer starlight.core {
+		:global(.page > header.header) {
+			background-color: #4525cc;
+			border-bottom-color: rgba(255, 255, 255, 0.24);
+		}
+
+		.header {
+			--sl-color-text-accent: #fff;
+			display: flex;
+			gap: var(--sl-nav-gap);
+			justify-content: space-between;
+			align-items: center;
+			height: 100%;
+		}
+
+		.title-wrapper {
+			overflow: clip;
+			padding: 0.25rem;
+			margin: -0.25rem;
+			min-width: 0;
+		}
+
+		:global(.brand-header .site-title) {
+			color: #fff;
+		}
+
+		:global(.brand-header .site-title img) {
+			box-sizing: border-box;
+			padding: 0.3rem 0.45rem;
+			border-radius: 0.45rem;
+			background: #fff;
+		}
+
+		:global(.brand-header site-search > button),
+		:global(.brand-header starlight-theme-select label),
+		:global(.brand-header starlight-lang-select label) {
+			color: #fff;
+		}
+
+		.right-group,
+		.social-icons {
+			gap: 0.8rem;
+			align-items: center;
+		}
+
+		.social-icons::after {
+			content: '';
+			height: 2rem;
+			border-inline-end: 1px solid rgba(255, 255, 255, 0.35);
+		}
+
+		.about-link {
+			border-radius: 0.35rem;
+			color: #fff;
+			font-size: var(--sl-text-sm);
+			font-weight: 600;
+			text-decoration: none;
+			white-space: nowrap;
+		}
+
+		.about-link:hover {
+			text-decoration: underline;
+			text-underline-offset: 0.2em;
+		}
+
+		.about-link:focus-visible,
+		summary:focus-visible,
+		:global(.brand-header a:focus-visible),
+		:global(.brand-header button:focus-visible),
+		:global(.brand-header select:focus-visible) {
+			outline: 2px solid #fff;
+			outline-offset: 3px;
+		}
+
+		.mobile-tools {
+			position: relative;
+			flex: none;
+		}
+
+		.mobile-tools summary {
+			display: grid;
+			place-items: center;
+			width: 2.5rem;
+			height: 2.5rem;
+			border-radius: 50%;
+			color: #fff;
+			cursor: pointer;
+			list-style: none;
+		}
+
+		.mobile-tools summary::-webkit-details-marker {
+			display: none;
+		}
+
+		.mobile-tools summary:hover,
+		.mobile-tools[open] summary {
+			background: rgba(255, 255, 255, 0.14);
+		}
+
+		.mobile-tools-panel {
+			position: fixed;
+			z-index: var(--sl-z-index-navbar);
+			inset-block-start: calc(var(--sl-nav-height) - 0.25rem);
+			inset-inline: 1rem;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			flex-wrap: wrap;
+			gap: 1rem;
+			padding: 0.8rem 1rem;
+			border: 1px solid rgba(255, 255, 255, 0.24);
+			border-radius: 0.6rem;
+			background: #4525cc;
+			box-shadow: var(--sl-shadow-lg);
+		}
+
+		.mobile-social-icons {
+			gap: 1rem;
+			align-items: center;
+		}
+
+		@media (max-width: 42rem) {
+			:global(.brand-header .site-title span) {
+				position: absolute;
+				width: 1px;
+				height: 1px;
+				padding: 0;
+				margin: -1px;
+				overflow: hidden;
+				clip: rect(0, 0, 0, 0);
+				white-space: nowrap;
+				border: 0;
+			}
+		}
+
+		@media (max-width: 24rem) {
+			.header {
+				gap: 0.5rem;
+			}
+
+			:global(.brand-header .site-title img) {
+				max-width: 5.25rem;
+			}
+		}
+
+		@media (min-width: 50rem) {
+			:global(:root[data-has-sidebar]) {
+				--__sidebar-pad: calc(2 * var(--sl-nav-pad-x));
+			}
+			:global(:root:not([data-has-toc])) {
+				--__toc-width: 0rem;
+			}
+			.header {
+				--__sidebar-width: max(0rem, var(--sl-content-inline-start, 0rem) - var(--sl-nav-pad-x));
+				--__main-column-fr: calc(
+					(
+							100% + var(--__sidebar-pad, 0rem) - var(--__toc-width, var(--sl-sidebar-width)) -
+								(2 * var(--__toc-width, var(--sl-nav-pad-x))) - var(--sl-content-inline-start, 0rem) -
+								var(--sl-content-width)
+						) / 2
+				);
+				display: grid;
+				grid-template-columns:
+					minmax(
+						calc(var(--__sidebar-width) + max(0rem, var(--__main-column-fr) - var(--sl-nav-gap))),
+						auto
+					)
+					1fr
+					auto;
+				align-content: center;
+			}
+		}
+	}
+</style>
