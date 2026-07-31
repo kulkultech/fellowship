@@ -27,6 +27,12 @@ This program is officially structured as a **fellowship** focused on peer-to-pee
 ### Q: What happened to the Kulkul Virtual Internship site (https://open-source.kulkul.tech/)?
 The initial version of the Kulkul Virtual Internship (previously hosted at [open-source.kulkul.tech](https://open-source.kulkul.tech/)) has been officially sunsetted. The Kulkul Fellowship program replaces it entirely, offering a modernized, AI-first structure that builds upon the core principles of the original internship.
 
+### Q: Is it paid or unpaid?
+Unpaid. The fellowship is an educational, peer-to-peer learning program and is unpaid. The focus is on building real-world engineering experience, portfolio projects, and open-source contributions.
+
+### Q: When does the internship start?
+There is no fixed start date. You can begin the 10-Step AI Challenge at any time, and once you've completed all requirements and passed the final interview, you'll join the fellowship.
+
 ---
 
 ## 💻 Git & Pull Request Questions
