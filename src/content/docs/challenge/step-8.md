@@ -47,3 +47,5 @@ Task: Explain why this test is failing and provide the exact code correction for
 ```
 
 Ensure that `uv run npm run test` outputs a completely green **`5 passed (5)`** checkmark before proceeding!
+
+**Post a message in the Discord channel saying you have completed the installation. Don't forget to attach a screenshot of your completed setup.**
