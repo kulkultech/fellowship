@@ -38,3 +38,6 @@ Start the Netlify development server to run both the Vite React frontend and the
 uv run npx netlify dev
 ```
 Open `http://localhost:8888` in your browser and test the registration and progress checklists. Verify that registration falls back to the placeholder email if left blank.
+
+
+**Post a message in the Discord channel saying you have completed the installation. Don't forget to attach a screenshot of your completed setup.**
