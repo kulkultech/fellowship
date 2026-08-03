@@ -87,10 +87,7 @@ const shouldRenderSearch =
 		}
 
 		:global(.brand-header .site-title img) {
-			box-sizing: border-box;
-			padding: 0.3rem 0.45rem;
-			border-radius: 0.45rem;
-			background: #fff;
+			background: transparent;
 		}
 
 		:global(.brand-header site-search > button),
@@ -179,20 +176,6 @@ const shouldRenderSearch =
 		.mobile-social-icons {
 			gap: 1rem;
 			align-items: center;
-		}
-
-		@media (max-width: 42rem), (min-width: 50rem) and (max-width: 53.25rem) {
-			:global(.brand-header .site-title span) {
-				position: absolute;
-				width: 1px;
-				height: 1px;
-				padding: 0;
-				margin: -1px;
-				overflow: hidden;
-				clip: rect(0, 0, 0, 0);
-				white-space: nowrap;
-				border: 0;
-			}
 		}
 
 		@media (max-width: 24rem) {
