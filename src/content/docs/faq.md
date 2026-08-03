@@ -13,10 +13,10 @@ Here are answers to the most common questions about the KulKul Fellowship progra
 No. You do not need a university cover letter to apply. Simply follow the [10-Step AI Challenge](/challenge/) and submit your Pull Request to get started.
 
 ### Q: Which majors or backgrounds can join this fellowship?
-There are no major or university requirements. Anyone who is early in their software engineering journey can join. We welcome university students, self-taught developers, and career switchers alike.
+There are no specific degree, major, or university requirements. Anyone who is early in their software engineering journey can join. We welcome university students, self-taught developers, and career switchers alike.
 
 ### Q: How many fellows are accepted in each cohort?
-We do not have a strict intake cap. If you complete the 10-step challenge, submit high-quality work, show solid git etiquette, and pass the final matching interview, you are welcome to join.
+We do not have a fixed intake limit. If you complete the 10-step challenge, submit high-quality work, show solid git etiquette, and pass the final matching interview, you are welcome to join.
 
 ### Q: What is the time commitment?
 This is an intensive learning experience. We expect fellows to commit to at least **3 months** of collaboration, with a minimum of **20 hours per week** of active study, coding, and peer reviews.
@@ -30,14 +30,21 @@ The initial version of the Kulkul Virtual Internship (previously hosted at [open
 ### Q: Is it paid or unpaid?
 Unpaid. The fellowship is an educational, peer-to-peer learning program and is unpaid. The focus is on building real-world engineering experience, portfolio projects, and open-source contributions.
 
-### Q: When does the internship start?
+### Q: When does the Fellowship start?
 There is no fixed start date. You can begin the 10-Step AI Challenge at any time, and once you've completed all requirements and passed the final interview, you'll join the fellowship.
+
+### Q: Is the fellowship free?
+Yes. The KulKul Fellowship is completely free. There are no registration fees or tuition costs. We invest our time in fellows who demonstrate commitment through the AI Challenge.
+
+### Q: What will I gain from completing the Fellowship?
+Upon completing the KulKul Fellowship, you'll have a strong portfolio of real-world projects and open-source contributions, practical experience building software with AI, stronger technical and collaboration skills, hands-on experience working in a peer-to-peer engineering environment, and a supportive network of fellow engineers and mentors—helping you become a more confident, AI-native software engineer.
+
 
 ---
 
 ## 💻 Git & Pull Request Questions
 
-### Q: Do my Pull Requests (PRs) need to be merged to be valid?
+### Q: Do my pull requests (PRs) need to be merged to count?
 Yes. Your PRs must pass the review of our core crew and be merged to count towards your challenge completion, except for temporary steps where we specify otherwise.
 
 ### Q: How do I create a branch and open a Pull Request?
@@ -57,3 +64,14 @@ The standard branch workflow is:
    git push origin feature/your-branch-name
    ```
 6. Visit your fork on GitHub and click the green **Compare & pull request** button to submit it.
+
+### Q: How many issues, comments, and pull requests do I need to complete the challenge?
+To complete the 10-Step AI Challenge, you need a minimum of:
+- 4 issues created
+- 4 comments
+- 5 merged pull requests
+
+### Q: How can I keep track of 10-Step AI Challenge progress?
+You can track your progress through the Progress Tracker, which reflects the status of your Pull Requests (PRs)
+
+
