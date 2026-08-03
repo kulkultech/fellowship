@@ -8,10 +8,12 @@ export default defineConfig({
 		starlight({
 			title: 'KulKul Fellowship',
 			logo: {
-				src: './src/assets/kulkul-logo.png',
+				src: './src/assets/kulkul-mark.png',
 				alt: 'KulKul Fellowship',
+				replacesTitle: true,
 			},
 			components: {
+				Footer: './src/components/Footer.astro',
 				Header: './src/components/Header.astro',
 				PageFrame: './src/components/PageFrame.astro',
 				SocialIcons: './src/components/SocialIcons.astro',
