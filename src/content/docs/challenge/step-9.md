@@ -39,3 +39,5 @@ On your live deployed website:
 1. Click **Apply Now** and register yourself as a fellow candidate.
 2. Keep the email empty to verify that it defaults to your `username@placeholder.kulkul.tech` format.
 3. Verify that your profile registers successfully in the dashboard and you can view your personal progress checklist. Since it runs in production, Netlify will automatically spin up **Netlify Blobs** to persist candidate states with no manual database credentials!
+
+**Post a message in the Discord channel saying you have completed the installation. Don't forget to attach a screenshot of your completed setup.**
