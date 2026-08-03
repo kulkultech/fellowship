@@ -6,11 +6,10 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'KulKul Fellowship',
+			title: 'Kulkul Fellowship',
 			logo: {
 				src: './src/assets/kulkul-mark.png',
-				alt: 'KulKul Fellowship',
-				replacesTitle: true,
+				alt: 'KulKul logo mark',
 			},
 			components: {
 				Footer: './src/components/Footer.astro',
