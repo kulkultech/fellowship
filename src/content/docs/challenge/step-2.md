@@ -64,3 +64,5 @@ SSH keys are required to authenticate securely with GitHub without typing your p
    ssh -T git@github.com
    ```
    *(You should see a message: "Hi [your-username]! You've successfully authenticated...")*
+
+Post a message in the Discord channel saying you have completed the installation. Don't forget to attach a screenshot of your completed setup.
