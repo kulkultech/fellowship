@@ -38,3 +38,5 @@ You must ensure that the AI agents you use do not leak your code back to their s
 For technical fellows, practicing basic terminal navigation inside Vim is highly encouraged. 
 *   Vim has two basic modes: **Insert Mode** (for editing text) and **Normal Mode** (for navigate and run shortcuts).
 *   You can practice interactively at [OpenVim](https://www.openvim.com).
+
+**Post a message in the Discord channel saying you have completed the installation. Don't forget to attach a screenshot of your completed setup.**
