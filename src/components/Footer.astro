@@ -14,12 +14,17 @@ import { Icon } from '@astrojs/starlight/components';
 	<Pagination />
 
 	<div class="footer-links sl-flex">
-		<a href="https://www.kulkul.tech/contact-us/" target="_blank" rel="noopener noreferrer">
+		<a href="https://discord.com/invite/AYvyGpb7aP" target="_blank" rel="noopener noreferrer">
 			Contact Us
 		</a>
 		{
 			config.credits && (
-				<a class="kudos sl-flex" href="https://starlight.astro.build">
+				<a
+					class="kudos sl-flex"
+					href="https://starlight.astro.build"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<Icon name="starlight" /> {Astro.locals.t('builtWithStarlight.label')}
 				</a>
 			)

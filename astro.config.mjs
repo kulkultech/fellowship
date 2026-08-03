@@ -1,9 +1,14 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import { satteri } from '@astrojs/markdown-satteri';
 import starlight from '@astrojs/starlight';
+import externalLinks from './src/plugins/external-links.mjs';
 
 // https://astro.build/config
 export default defineConfig({
+	markdown: {
+		processor: satteri({ hastPlugins: [externalLinks] }),
+	},
 	integrations: [
 		starlight({
 			title: 'Kulkul Fellowship',
@@ -12,6 +17,7 @@ export default defineConfig({
 				alt: 'KulKul logo mark',
 			},
 			components: {
+				EditLink: './src/components/EditLink.astro',
 				Footer: './src/components/Footer.astro',
 				Header: './src/components/Header.astro',
 				PageFrame: './src/components/PageFrame.astro',
