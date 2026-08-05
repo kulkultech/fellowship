@@ -37,3 +37,9 @@ Following individuals on GitHub helps you see what other engineers in the group 
 We coordinate all peer-to-peer discussions, code reviews, and meeting announcements via chat:
 *   💬 **Telegram:** Join the [Kulkul Technology Telegram Chat](https://t.me/kulkultech) for general discussions.
 *   💬 **Discord:** Join the [Discord Server](https://discord.gg/AYvyGpb7aP) and navigate to the `#first-steps` channel. Introduce yourself to the cohort!
+
+### 4. Follow Kulkul on Social Media
+Get to know Kulkul beyond the Fellowship by following our official channels for company news, engineering insights, and updates on what we are building:
+* 🐦 **X:** Follow [Kulkul Technology on X](https://x.com/kulkultech).
+* 💼 **LinkedIn:** Follow [Kulkul Technology on LinkedIn](linkedin.com/company/kulkul-technology/).
+
