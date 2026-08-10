@@ -21,6 +21,7 @@ Pre-action: Sign up for a [GitHub](https://docs.github.com/en/get-started) accou
 ### 1. Support the Open-Source Repositories
 Go to GitHub, log into your account, and **star** the following repositories. Starring project repositories is a way to show appreciation and stay updated:
 *   ⭐ [KulKul Fellowship Portal](https://github.com/kulkultech/fellowship) — The source of this onboarding portal.
+*   ⭐ [KulKul Sandbox](https://github.com/kulkultech/fellowship-management-system/tree/125b2440ae8e9ca58c6af266d04ec6066fc59bb2) — Fellowship management system.
 *   ⭐ [Ngecilin](https://github.com/kulkultech/ngecilin) — Browser extension to shorten URLs.
 *   ⭐ [TinyURL Client](https://github.com/kulkultech/tinyurl-client) — Javascript library for the TinyURL API.
 *   ⭐ [Bitly Client](https://github.com/kulkultech/bitly-client) — Javascript library for the Bitly API.
@@ -35,11 +36,12 @@ Following individuals on GitHub helps you see what other engineers in the group 
 
 ### 3. Join the Communication Channels
 We coordinate all peer-to-peer discussions, code reviews, and meeting announcements via chat:
-*   💬 **Telegram:** Join the [Kulkul Technology Telegram Chat](https://t.me/kulkultech) for general discussions.
+*   💬 **Whatsapp:** Join the [Kulkul Technology Whatsapp Community](https://chat.whatsapp.com/LWGuORpw33pCCLjR0sVRrs) for general discussions.
 *   💬 **Discord:** Join the [Discord Server](https://discord.gg/AYvyGpb7aP) and navigate to the `#first-steps` channel. Introduce yourself to the cohort!
 
 ### 4. Follow Kulkul on Social Media
 Get to know Kulkul beyond the Fellowship by following our official channels for company news, engineering insights, and updates on what we are building:
 * 🐦 **X:** Follow [Kulkul Technology on X](https://x.com/kulkultech).
 * 💼 **LinkedIn:** Follow [Kulkul Technology on LinkedIn](linkedin.com/company/kulkul-technology/).
+
 
