@@ -41,3 +41,13 @@ Open `http://localhost:8888` in your browser and test the registration and progr
 
 
 **Post a message in the Discord channel saying you have completed the installation. Don't forget to attach a screenshot of your completed setup.**
+---
+## ✅ Step 7 Progress Checkpoint
+
+In this step, you can complete at least:
+
+* **2 pull request**
+* **2 valid issue**
+* **2 constructive peer-review comment**
+
+Approved contributions will count toward your final merit score.
