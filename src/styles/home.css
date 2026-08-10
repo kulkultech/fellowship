@@ -1,17 +1,21 @@
 .sl-link-button.fellowship-apply-cta {
-	background: #f9d423;
+	background: #4525cc;
 	border-color: #4525cc;
 	box-shadow: 0 0.3rem 0.75rem rgb(69 37 204 / 22%);
-	color: #2a176f;
+	color: #fff;
 	font-weight: 700;
 	transition:
+		background-color 160ms ease,
+		border-color 160ms ease,
 		transform 160ms ease,
 		box-shadow 160ms ease;
 }
 
 .sl-link-button.fellowship-apply-cta:hover {
+	background: #2a176f;
+	border-color: #2a176f;
 	box-shadow: 0 0.45rem 0.9rem rgb(69 37 204 / 28%);
-	color: #2a176f;
+	color: #fff;
 	transform: translateY(-0.125rem);
 }
 
