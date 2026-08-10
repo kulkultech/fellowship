@@ -38,3 +38,15 @@ Serverless API endpoints are deployed to serve API endpoints:
 We use the Repository Pattern to abstract data persistence:
 *   **Production (Netlify Blobs):** A serverless key-value blob storage provided by Netlify, requiring zero configuration or credentials.
 *   **Local Development (In-Memory Repository):** A fallback data store seeded with mock candidates, allowing you to develop and test locally with no database setups.
+
+---
+## ✅ Step 6 Progress Checkpoint
+
+In this step, you can complete at least:
+
+* *1 pull request*
+* *1 valid issue*
+* *1 constructive peer-review comment*
+
+Approved contributions will count toward your final merit score.
+
