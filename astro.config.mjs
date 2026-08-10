@@ -12,6 +12,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Kulkul Fellowship',
+			customCss: ['./src/styles/home.css'],
 			logo: {
 				src: './src/assets/kulkul-mark.png',
 				alt: 'KulKul logo mark',
