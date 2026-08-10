@@ -42,3 +42,15 @@ You can list all files in the root to confirm:
 ls -la
 ```
 Ensure `AGENTS.md` and `DESIGN.md` appear in the output.
+
+---
+
+## ✅ Step 5 Progress Checkpoint
+
+By the end of this step, your contribution tracker should include at least:
+
+* *1 merged pull request*
+* *1 valid issue*
+* *1 constructive peer-review comment*
+
+These contributions count toward the merit requirements for your Kulkul Fellowship badge.
