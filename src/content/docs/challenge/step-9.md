@@ -41,3 +41,14 @@ On your live deployed website:
 3. Verify that your profile registers successfully in the dashboard and you can view your personal progress checklist. Since it runs in production, Netlify will automatically spin up **Netlify Blobs** to persist candidate states with no manual database credentials!
 
 **Post a message in the Discord channel saying you have completed the installation. Don't forget to attach a screenshot of your completed setup.**
+
+---
+## ✅ Step 9 Progress Checkpoint
+
+In this step, you can complete at least:
+
+* **1 pull request**
+* **1 valid issue**
+* **1 constructive peer-review comment**
+
+Approved contributions will count toward your final merit score.
