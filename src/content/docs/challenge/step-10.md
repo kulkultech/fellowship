@@ -63,3 +63,9 @@ git push origin feature/solve-onboarding-issue
 *   **Discord Announcement:** Post a link to your open PR in the Discord `#first-steps` channel and tag `@rrachman`.
 *   **Peer Reviews:** Look at other open PRs from fellows, review their changes, and leave helpful comments. Collaborative review is the heart of the fellowship!
 *   Once your PR is reviewed and approved by facilitators, we will schedule your final matching interview.
+
+---
+
+### 🎉 You Made It!
+
+You’ve reached the end of the 10-Step AI Challenge! Thank you for building with us—we look forward to seeing what you do next! 🚀
