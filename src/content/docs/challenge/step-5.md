@@ -42,3 +42,15 @@ You can list all files in the root to confirm:
 ls -la
 ```
 Ensure `AGENTS.md` and `DESIGN.md` appear in the output.
+
+---
+
+## ✅ Step 5 Progress Checkpoint
+
+In this step, you can complete at least:
+
+* **1 pull request**
+* **1 valid issue**
+* **1 constructive peer-review comment**
+
+Approved contributions will count toward your final merit score.
