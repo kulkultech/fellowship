@@ -7,6 +7,18 @@ This step describes how to pick up and solve issue tickets in our open-source co
 
 ---
 
+## 📹 Video Walkthrough
+
+<iframe
+  style="width: 100%; aspect-ratio: 16 / 9; border-radius: 8px; border: 0; margin: 1rem 0 2rem 0;"
+  src="https://www.youtube.com/embed/8BGaTvq6JW8"
+  title="Step 7: Solve Sandbox Issue Walkthrough"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen>
+</iframe>
+
+---
+
 ## 🎯 Step Objectives
 *   Learn how to identify and assign yourself to open issues.
 *   Practice git branching workflows in a submodule context.

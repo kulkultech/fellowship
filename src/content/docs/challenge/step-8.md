@@ -7,6 +7,18 @@ Testing is an essential safeguard in software development. In this step, you wil
 
 ---
 
+## 📹 Video Walkthrough
+
+<iframe
+  style="width: 100%; aspect-ratio: 16 / 9; border-radius: 8px; border: 0; margin: 1rem 0 2rem 0;"
+  src="https://www.youtube.com/embed/rl51-ggU89k"
+  title="Step 8: Prompt Automated Testing Walkthrough"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen>
+</iframe>
+
+---
+
 ## 🎯 Step Objectives
 *   Execute the existing Vitest suite on your local sandbox directory.
 *   Identify test failures corresponding to the three seeded bugs.

@@ -7,6 +7,18 @@ Now that your workspace and AI stack are set up, we will start working with git.
 
 ---
 
+## 📹 Video Walkthrough
+
+<iframe
+  style="width: 100%; aspect-ratio: 16 / 9; border-radius: 8px; border: 0; margin: 1rem 0 2rem 0;"
+  src="https://www.youtube.com/embed/cwko4OusNlI"
+  title="Step 5: Fork & Clone the Sandbox Walkthrough"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen>
+</iframe>
+
+---
+
 ## 🎯 Step Objectives
 *   Fork the repository to your own GitHub profile.
 *   Clone your fork locally.
