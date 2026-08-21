@@ -67,9 +67,11 @@ The standard branch workflow is:
 
 ### Q: How many issues, comments, and pull requests do I need to complete the challenge?
 To complete the 10-Step AI Challenge, you need a minimum of:
-- 4 issues created
-- 4 comments
-- 5 merged pull requests
+- 6 issues created
+- 6 comments
+- 6 merged pull requests
+
+Contributions to the Sandbox repository are worth **2** points each and contributions to the Fellowship website repository are worth **1** point each.
 
 ### Q: How can I keep track of 10-Step AI Challenge progress?
 You can track your progress through the Progress Tracker, which reflects the status of your Pull Requests (PRs)
