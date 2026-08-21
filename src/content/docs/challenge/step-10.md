@@ -60,7 +60,7 @@ git push origin feature/solve-onboarding-issue
 4. Fill out the description with a summary of the issues you fixed and a link to your live Netlify deployment. Click **Create Pull Request**.
 
 ### 4. Code Review & Interview Scheduling
-*   **Discord Announcement:** Post a link to your open PR in the Discord `#first-steps` channel and tag `@rrachman`.
+*   **Discord Announcement:** Post a link to your open PR in the Discord `#first-steps` channel and tag `@haka2608 @ragilzakaria @ahloct`. 
 *   **Peer Reviews:** Look at other open PRs from fellows, review their changes, and leave helpful comments. Collaborative review is the heart of the fellowship!
 *   Once your PR is reviewed and approved by facilitators, we will schedule your final matching interview.
 
