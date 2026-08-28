@@ -7,6 +7,18 @@ In this final step, you will document your onboarding by adding yourself to the 
 
 ---
 
+## 📹 Video Walkthrough
+
+<iframe
+  style="width: 100%; aspect-ratio: 16 / 9; border-radius: 8px; border: 0; margin: 1rem 0 2rem 0;"
+  src="https://www.youtube.com/embed/D5w1N24w12A"
+  title="Step 10: Submit & Review Walkthrough"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen>
+</iframe>
+
+---
+
 ## 🎯 Step Objectives
 *   Add your profile card to the fellows documentation.
 *   Submit a Pull Request (PR) containing your sandbox and wiki changes.
