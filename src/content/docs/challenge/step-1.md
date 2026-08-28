@@ -7,6 +7,18 @@ Social coding and open-source contribution are built on collaboration. Before di
 
 ---
 
+## 📹 Video Walkthrough
+
+<iframe
+  style="width: 100%; aspect-ratio: 16 / 9; border-radius: 8px; border: 0; margin: 1rem 0 2rem 0;"
+  src="https://www.youtube.com/embed/OKgz3WrCDWM"
+  title="Step 1: Community Setup Walkthrough"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen>
+</iframe>
+
+---
+
 ## 🎯 Step Objectives
 *   Connect with the team on GitHub.
 *   Show support for our open-source projects.
